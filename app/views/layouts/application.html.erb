@@ -11,7 +11,14 @@
   </head>
 
   <body>
-    <h1><%= link_to "Kirk's Trucks", root_path %> </h1>
+    <header><h1><%= link_to "Kirk's Trucks", root_path %></h1></header>
     <%= yield %>
+    <footer>
+      <ul>
+        <li><%= mail_to "Kirks@example.com" %></li>
+        <li><%= phone_to "000-000-0000" %></li>
+        <li>123 Truck Dr, Truck USA</li>
+      </ul>
+    </footer>
   </body>
 </html>
