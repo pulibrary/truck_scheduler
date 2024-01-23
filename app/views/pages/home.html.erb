@@ -1,7 +1,34 @@
 <p>Welcome to Kirk's Trucks please make your reservations with us today!!!</p>
 <ul>
-  <li><%= link_to "Reservations", reservations_path %></li>
-  <li><%= link_to "Trucks", trucks_path %></li>
-  <li><%= link_to "Customers", customers_path %></li>
+  <li><%= link_to "About", anchor: "about" %></li>
+  <li><%= link_to "Services", anchor: "services"  %></li>
+  <li><%= link_to "Contact", anchor: "contact" %></li>
 </ul>
 <%= image_tag "Dump_Truck_1b.jpg" %> 
+
+ <h3 id="about">About</h3>
+ <p> Kirk's Trucks was founded in 2021. We are dedicated to providing hauling solutions to fit our customer's needs. From residential to commercial properties, our skilled staff can tackle any sized job.</p>
+ <p> We take pride in being reliable, and safe, and having exceptional customer service. Contact us for your hauling needs.</p>
+
+
+ <h3 id="services">We Haul The Following </h3>
+ <ul>
+  <li>Gravel</li>
+  <li>Sand</li>
+  <li>Debris</li>
+  <li>Stone</li>
+  <li>Fill Dirt</li>
+  <li>Brush or Tree piles</li>
+ </ul>
+
+ <h3 id="contact">Contact</h3>
+
+ <%= form_with url: "/contact" do |form| %>
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name %>
+  <%= form.label :email, "Email:" %>
+  <%= form.email_field :email %>
+  <%= form.label :message, "Message:" %>
+  <%= form.text_area :message %>
+  <%= form.submit "Submit" %>
+ <% end %>
