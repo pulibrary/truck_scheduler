@@ -32,3 +32,12 @@ nav a {
 nav a:visited {
   color: #000;
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  /* set the margin to counter act the body margin*/
+  margin: 1rem -33px -33px;
+  background-color: lightgreen;
+  color: black;
+}
