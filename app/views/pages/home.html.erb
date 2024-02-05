@@ -1,13 +1,6 @@
-<p>Welcome to Kirk's Trucks please make your reservations with us today!!!</p>
-
-<%= image_tag "Dump_Truck_1b.jpg" %> 
-
- <h3 id="about">About</h3>
- <p> Kirk's Trucks was founded in 2021. We are dedicated to providing hauling solutions to fit our customer's needs. From residential to commercial properties, our skilled staff can tackle any sized job.</p>
- <p> We take pride in being reliable, and safe, and having exceptional customer service. Contact us for your hauling needs.</p>
-
-
- <h3 id="services">We Haul The Following </h3>
+<h3 id="services">A Full Service Hauling Company </h3>
+ <p>At Kirk's Trucks we are ready to help you make your project successful by taking care of all your hauling needs.</p>
+ <p>We Haul the following materials:</p>
  <ul>
   <li>Gravel</li>
   <li>Sand</li>
@@ -15,16 +8,34 @@
   <li>Stone</li>
   <li>Fill Dirt</li>
   <li>Brush or Tree piles</li>
+  <li>And more!</li>
  </ul>
 
- <h3 id="contact">Contact</h3>
 
- <%= form_with url: "/contact" do |form| %>
-  <%= form.label :name, "Name:" %>
-  <%= form.text_field :name %>
-  <%= form.label :email, "Email:" %>
-  <%= form.email_field :email %>
-  <%= form.label :message, "Message:" %>
-  <%= form.text_area :message %>
-  <%= form.submit "Submit" %>
- <% end %>
+<p> Please fill out the form to be connected with our specialized professionals.</p>
+
+<div class="contact">
+  <%= image_tag("Dump_Truck_1b.jpg", class: "responsive") %>
+  <div class="form_wrapper">
+    <h3 id="contact">Contact</h3>
+
+    <%= form_with url: "/contact" do |form| %>
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %>
+      <%= form.label :email, "Email:" %>
+      <%= form.email_field :email %>
+      <%= form.label :message, "Message:" %>
+      <%= form.text_area :message %>
+      <%= form.submit "Submit" %>
+    <% end %>
+ </div>
+</div>
+
+ <h3 id="about">About Our Company</h3>
+ <p> Kirk's Trucks was founded in 2021. We are dedicated to providing hauling solutions to fit our customer's needs. From residential to commercial properties, our skilled staff can tackle any sized job.</p>
+ <p> We take pride in being reliable, and safe, and having exceptional customer service. Contact us for your hauling needs.</p>
+
+
+ 
+
+ 

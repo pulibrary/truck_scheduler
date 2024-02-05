@@ -2,3 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// Home page styles
+div.contact {
+  position:relative;
+}
+
+.contact .form_wrapper {
+ position: absolute;
+ z-index: 100;
+ top: 50%;
+ left: 50%;
+ color: white;
+}
+
+.contact img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+ }
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
