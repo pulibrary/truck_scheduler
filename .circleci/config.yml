@@ -27,6 +27,9 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+      - run:
+          name: Install NPM Dependencies via Yarn
+          command: yarn install --frozen-lockfile
       - ruby/install-deps
       - browser-tools/install-browser-tools
       - run:
