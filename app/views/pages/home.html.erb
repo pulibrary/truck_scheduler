@@ -1,12 +1,22 @@
-<p>Welcome to Kirk's Trucks please make your reservations with us today!!!</p>
+<div class="hero">
+  
+  
+  <div class="hero-inner">
+    
+    <h1 class="hero-headline">Welcome to Kirk's Trucks</h1>
+    <h2 class="hero-headline">Contact Us for a Quote Today!</h2>
+    
+  </div>
+  
+</div>
 
-<%= image_tag "Dump_Truck_1b.jpg" %> 
-
+<section>
  <h3 id="about">About</h3>
  <p> Kirk's Trucks was founded in 2021. We are dedicated to providing hauling solutions to fit our customer's needs. From residential to commercial properties, our skilled staff can tackle any sized job.</p>
  <p> We take pride in being reliable, and safe, and having exceptional customer service. Contact us for your hauling needs.</p>
+</section>
 
-
+<section>
  <h3 id="services">We Haul The Following </h3>
  <ul>
   <li>Gravel</li>
@@ -16,7 +26,9 @@
   <li>Fill Dirt</li>
   <li>Brush or Tree piles</li>
  </ul>
+ </section>
 
+<section>
  <h3 id="contact">Contact</h3>
 
  <%= form_with url: "/contact" do |form| %>
@@ -27,4 +39,5 @@
   <%= form.label :message, "Message:" %>
   <%= form.text_area :message %>
   <%= form.submit "Submit" %>
- <% end %>
+<% end %>
+</section>
