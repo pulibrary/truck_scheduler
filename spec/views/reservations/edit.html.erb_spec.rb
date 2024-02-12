@@ -6,7 +6,9 @@ RSpec.describe "reservations/edit", type: :view do
       material: "MyString",
       site_location: "MyString",
       customer: Customer.create,
-      truck: Truck.create
+      truck: Truck.create,
+      start_time: DateTime.now,
+      end_time: DateTime.now + 1.day
     )
   }
 

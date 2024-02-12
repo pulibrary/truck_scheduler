@@ -6,7 +6,9 @@ RSpec.describe "reservations/show", type: :view do
       material: "Material",
       site_location: "Site Location",
       customer: Customer.create,
-      truck: Truck.create 
+      truck: Truck.create,
+      start_time: DateTime.now,
+      end_time: DateTime.now + 1.day 
     ))
   end
 
