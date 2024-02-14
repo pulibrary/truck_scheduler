@@ -27,7 +27,7 @@ RSpec.describe "/trucks", type: :request do
 
   describe "GET /index" do
     it "renders a successful response" do
-      Truck.create! valid_attributes
+      FactoryBot.create(:truck)
       get trucks_url
       expect(response).to be_successful
     end
@@ -35,7 +35,7 @@ RSpec.describe "/trucks", type: :request do
 
   describe "GET /show" do
     it "renders a successful response" do
-      truck = Truck.create! valid_attributes
+      truck = FactoryBot.create(:truck)
       get truck_url(truck)
       expect(response).to be_successful
     end
@@ -50,7 +50,7 @@ RSpec.describe "/trucks", type: :request do
 
   describe "GET /edit" do
     it "renders a successful response" do
-      truck = Truck.create! valid_attributes
+      truck = FactoryBot.create(:truck)
       get edit_truck_url(truck)
       expect(response).to be_successful
     end
@@ -93,14 +93,14 @@ RSpec.describe "/trucks", type: :request do
       }
 
       it "updates the requested truck" do
-        truck = Truck.create! valid_attributes
+        truck = FactoryBot.create(:truck)
         patch truck_url(truck), params: { truck: new_attributes }
         truck.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the truck" do
-        truck = Truck.create! valid_attributes
+        truck = FactoryBot.create(:truck)
         patch truck_url(truck), params: { truck: new_attributes }
         truck.reload
         expect(response).to redirect_to(truck_url(truck))
@@ -110,7 +110,7 @@ RSpec.describe "/trucks", type: :request do
     context "with invalid parameters" do
     
       it "renders a successful response (i.e. to display the 'edit' template)" do
-        truck = Truck.create! valid_attributes
+        truck = FactoryBot.create(:truck)
         patch truck_url(truck), params: { truck: invalid_attributes }
         expect(response).to be_successful
       end
@@ -120,14 +120,14 @@ RSpec.describe "/trucks", type: :request do
 
   describe "DELETE /destroy" do
     it "destroys the requested truck" do
-      truck = Truck.create! valid_attributes
+      truck = FactoryBot.create(:truck)
       expect {
         delete truck_url(truck)
       }.to change(Truck, :count).by(-1)
     end
 
     it "redirects to the trucks list" do
-      truck = Truck.create! valid_attributes
+      truck = FactoryBot.create(:truck)
       delete truck_url(truck)
       expect(response).to redirect_to(trucks_url)
     end
