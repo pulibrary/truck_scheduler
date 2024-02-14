@@ -1,12 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "trucks/edit", type: :view do
-  let(:truck) {
-    Truck.create!(
-      name: "MyString"
-    )
-  }
-
+  let(:truck) { FactoryBot.create(:truck) }
   before(:each) do
     assign(:truck, truck)
   end
