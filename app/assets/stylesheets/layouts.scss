@@ -8,7 +8,8 @@ header {
   top:0;
   left:0;
   right:0;
-  background-color: lightgreen;
+  color: #d9ebd1;
+  background-color: #040500;
   display:grid;
   grid-template-columns: 1fr 1fr;
   align-items:center;
@@ -40,9 +41,11 @@ header {
   
 
 
-h1.logo {
+h1.logo a {
   text-align: left;
+  text-decoration: none;
   padding-left: 2rem;
+  color: #d9ebd1;
 }
 
 nav {
@@ -52,11 +55,11 @@ nav {
 
 nav a {
   margin: 0px 5px;
-  color: #000;
+  color: #d9ebd1;
 }
 
 nav a:visited {
-  color: #000;
+  color: #d9ebd1;
 }
 
 footer {
@@ -64,6 +67,6 @@ footer {
   padding: 3px;
   /* set the margin to counter act the body margin*/
   margin: 1rem -33px -33px;
-  background-color: lightgreen;
-  color: black;
+  background-color: #040500;
+  color: #d9ebd1;
 }
