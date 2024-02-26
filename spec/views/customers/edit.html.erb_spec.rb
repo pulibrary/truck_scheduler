@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "customers/edit", type: :view do
   let(:customer) {
-    Customer.create!(
-      name: "MyString",
-      phone: "MyString",
-      email: "MyString"
-    )
+    FactoryBot.create(:customer)
   }
 
   before(:each) do
